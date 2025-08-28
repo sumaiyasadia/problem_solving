@@ -36,7 +36,7 @@ void print (ListNode*head)
  ListNode* deleteDuplicates(ListNode* head)
 {
 
-if (!head || !head->next)
+if (head==nullptr || head->next==nullptr)
     return head;
 
 
@@ -49,12 +49,12 @@ if (!head || !head->next)
         }
 
 
-        if (!head) return nullptr;
+        if (head==nullptr) return nullptr;
 
         ListNode* prev = head;
         ListNode* curr = head->next;
 
-        while (curr) {
+        while (curr!=nullptr) {
             if (curr->next && curr->val == curr->next->val) {
                 int val = curr->val;
                 while (curr && curr->val == val) {
