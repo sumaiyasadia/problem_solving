@@ -2,34 +2,41 @@
 using namespace std;
 int main()
 {
-    int n;
-    cin>>n;
-    int a[n];
-    for(int i=0;i<n;i++)
+
+    int t;
+    cin>>t;
+    while(t--)
     {
-        cin>>a[i];
+
+
+    int n,k;
+    cin>>n>>k;
+    if(n%k==0)
+    {
+        cout<<n<<endl;
 
     }
-    int p=0;
-     for(int i=0;i<n;i++)
-    {
-        if(a[i]==a[i+1])
-        {
-            p=a[i];
+    else{
+int h1,m1;
+h1=n/k;
+m1=k/2;
+if(n%k<m1)
+{
 
-continue;
+int r=(k*h1)+n%k;
+cout<<r<<endl;
 
+    }
+    else
+      {
 
-        }
-        else if(p==a[i])
-        {
-            continue;
-        }
-         cout<<a[i]<<endl;
-
-        //cout<<a[i];
-
+int r=(k*h1)+m1;
+cout<<r<<endl;
 
     }
 
+
+   }
 }
+}
+
