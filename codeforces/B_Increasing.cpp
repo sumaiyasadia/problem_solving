@@ -16,7 +16,7 @@ int main()
         }
         sort(a,a+n);
        bool possible=true;
-         for(int i=0;i<n;i++)
+         for(int i=0;i<n-1;i++)
         {
             if(a[i]== a[i+1])
             {
