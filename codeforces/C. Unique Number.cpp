@@ -11,6 +11,7 @@ int main()
         if(x>45)
         {
             cout<<"-1"<<endl;
+            continue;
         }
         int a[10];
         int index=0;
