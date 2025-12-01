@@ -21,13 +21,13 @@ long long solve(long long n) {
 
     while (n > 0) {
 
-        // log approximation
+
         int x = floor(log((long double)n) / log((long double)3));
 
-        // adjust x upward if possible
+
         while (x + 1 < 20 && po[x + 1] <= n) x++;
 
-        // adjust x downward if needed
+
         while (po[x] > n) x--;
 
         ans += costArr[x];
