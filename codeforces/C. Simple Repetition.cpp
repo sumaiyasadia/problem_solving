@@ -1,7 +1,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
-void isPrime(long long x,long long k)
+void isPrime(long long x,int k)
 {
     bool ans=true;
     if(x!=1&&k>1)
@@ -14,7 +14,7 @@ void isPrime(long long x,long long k)
         {
             ans=false;
         }
-        for(int i=2;i<sqrt(x);i++)
+        for(int i=2;i<=sqrt(x);i++)
         {
             if(x%i==0)
             {
@@ -39,7 +39,8 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        long long x,k;
+        long long x;
+        int k;
         cin >> x>>k;
         isPrime(x,k);
 
